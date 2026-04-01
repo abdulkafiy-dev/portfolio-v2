@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Youtube } from "lucide-react";
 import heroBg from "../../assets/hero-bg.png";
 import { Button } from "../ui/button";
 
@@ -39,19 +39,19 @@ export function Hero() {
         >
           Hi, I'm{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-500 text-glow">
-            Alex
+            Abdulkafiy
           </span>
           <br />
-          Full-Stack Developer
+          Frontend Developer
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-2xl text-lg md:text-xl text-muted-foreground mb-10"
+          className="max-w-3xl text-lg md:text-xl text-muted-foreground mb-10"
         >
-          Building futuristic, high-performance web applications with React, Node.js, and a keen eye for modern design.
+          I build high-performance web interfaces that turn complex problems into simple, responsive experiences.
         </motion.p>
 
         <motion.div
@@ -60,12 +60,16 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 mb-16"
         >
-          <Button size="lg" className="rounded-full px-8 bg-primary hover:bg-primary/90 text-white shadow-[0_0_20px_rgba(139,92,246,0.5)]">
-            View Projects
-          </Button>
-          <Button size="lg" variant="outline" className="rounded-full px-8 glass border-primary/20 hover:bg-primary/10">
-            Contact Me
-          </Button>
+          <a href="#projects">
+            <Button size="lg" className="w-full sm:w-auto rounded-full px-8 bg-primary hover:bg-primary/90 text-white shadow-[0_0_20px_rgba(139,92,246,0.5)]">
+              View Projects
+            </Button>
+          </a>
+          <a href="https://abdulkafiy.netlify.app/assets/cv/Abdulkafiy_Abdulkabir_Resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 glass border-primary/20 hover:bg-primary/10">
+              Download CV
+            </Button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -74,14 +78,17 @@ export function Hero() {
           transition={{ duration: 1, delay: 1.2 }}
           className="flex gap-6 mb-12"
         >
-          <a href="#" className="p-3 rounded-full glass-card hover:text-primary transition-all hover:scale-110">
+          <a href="https://github.com/abdulkafiy-dev" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full glass-card hover:text-primary transition-all hover:scale-110">
             <Github className="w-5 h-5" />
           </a>
-          <a href="#" className="p-3 rounded-full glass-card hover:text-primary transition-all hover:scale-110">
+          <a href="https://ng.linkedin.com/in/abdulkafiy-abdulkabir-5b64541b4" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full glass-card hover:text-primary transition-all hover:scale-110">
             <Linkedin className="w-5 h-5" />
           </a>
-          <a href="#" className="p-3 rounded-full glass-card hover:text-primary transition-all hover:scale-110">
-            <Twitter className="w-5 h-5" />
+          <a href="mailto:isholaabdulkafiy@gmail.com" className="p-3 rounded-full glass-card hover:text-primary transition-all hover:scale-110">
+            <Mail className="w-5 h-5" />
+          </a>
+          <a href="https://www.youtube.com/@abdulkafiy" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full glass-card hover:text-primary transition-all hover:scale-110">
+            <Youtube className="w-5 h-5" />
           </a>
         </motion.div>
 

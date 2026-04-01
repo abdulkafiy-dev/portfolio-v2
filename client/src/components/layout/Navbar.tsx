@@ -44,8 +44,8 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
         <Link href="/">
-          <span className="text-2xl font-bold font-sans tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 cursor-pointer">
-            DEV.PORTFOLIO
+          <span className="text-2xl font-bold font-sans tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500 cursor-pointer uppercase">
+            Abdulkafiy
           </span>
         </Link>
 

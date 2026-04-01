@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 import { Badge } from "../ui/badge";
-import avatarImg from "../../assets/avatar.png";
 
 const skills = [
-  "React", "TypeScript", "Node.js", "Next.js", 
-  "Tailwind CSS", "Framer Motion", "GraphQL", 
-  "PostgreSQL", "MongoDB", "Docker", "AWS"
+  "HTML", "CSS", "JavaScript", "React", 
+  "Tailwind CSS", "Bootstrap", "Git", "GitHub", 
+  "Responsive Design", "Web Accessibility", "Performance Optimization"
 ];
 
 export function About() {
@@ -33,12 +32,12 @@ export function About() {
             transition={{ duration: 0.8 }}
             className="flex justify-center"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full p-2 glass-card shadow-2xl shadow-primary/20">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary to-blue-500 rounded-full animate-spin-slow opacity-20 blur-xl" />
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl p-2 glass-card shadow-2xl shadow-primary/20 overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary to-blue-500 rounded-2xl animate-spin-slow opacity-20 blur-xl" />
               <img
-                src={avatarImg}
-                alt="Profile"
-                className="w-full h-full object-cover rounded-full border-4 border-background relative z-10"
+                src="https://abdulkafiy.netlify.app/assets/images/abdulkafiy.png"
+                alt="Abdulkafiy Abdulkabir"
+                className="w-full h-full object-cover rounded-xl border-2 border-white/10 relative z-10 group-hover:scale-105 transition-transform duration-500"
               />
             </div>
           </motion.div>
@@ -52,11 +51,11 @@ export function About() {
             <h3 className="text-2xl font-bold mb-4">
               I code things that live on the internet.
             </h3>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Hello! My name is Alex, and I enjoy creating things that live on the internet. My interest in web development started back in 2015 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS taught me a lot about HTML & CSS!
+            <p className="text-muted-foreground mb-4 leading-relaxed">
+              I'm Abdulkafiy, a designer-developer who specializes in crafting reliable web experiences at the intersection of design and logic. I prioritize web fundamentals and clean coding practices over rapid, first-draft builds.
             </p>
             <p className="text-muted-foreground mb-8 leading-relaxed">
-              Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, a huge corporation, and a student-led design studio. My main focus these days is building accessible, inclusive products and digital experiences at Upstatement for a variety of clients.
+              I'm eager to bring my eye for detail to a collaborative team where I can contribute meaningfully and grow professionally. When I'm not coding, I enjoy refining UX details, exploring new technologies, and collaborating with multidisciplinary teams to solve real problems. If you're looking for someone who values thoughtful craft and steady growth, let's chat.
             </p>
 
             <div className="flex flex-wrap gap-2">
