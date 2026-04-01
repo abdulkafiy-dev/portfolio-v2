@@ -63,11 +63,11 @@ export function Navbar() {
           ))}
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2 rounded-full hover:bg-white/10 transition-colors"
+            className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors relative flex items-center justify-center h-10 w-10"
+            aria-label="Toggle theme"
           >
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 top-2" />
-            <span className="sr-only">Toggle theme</span>
+            <Sun className="h-5 w-5 absolute transition-all duration-300 rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
+            <Moon className="h-5 w-5 absolute transition-all duration-300 rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
           </button>
         </div>
 
@@ -75,12 +75,13 @@ export function Navbar() {
         <div className="md:hidden flex items-center space-x-4">
           <button
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            className="p-2"
+            className="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors relative flex items-center justify-center h-10 w-10"
+            aria-label="Toggle theme"
           >
-            <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 top-2" />
+            <Sun className="h-5 w-5 absolute transition-all duration-300 rotate-0 scale-100 dark:-rotate-90 dark:scale-0" />
+            <Moon className="h-5 w-5 absolute transition-all duration-300 rotate-90 scale-0 dark:rotate-0 dark:scale-100" />
           </button>
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="p-2">
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
