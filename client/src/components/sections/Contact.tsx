@@ -91,7 +91,7 @@ export function Contact() {
               
               {/* WhatsApp Integration Button */}
               <a 
-                href="https://wa.me/1234567890" 
+                href="https://wa.me/2349043406245" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex-1"
