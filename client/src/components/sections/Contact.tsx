@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Phone } from "lucide-react";
 import { Button } from "../ui/button";
@@ -5,6 +6,44 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Construct the mailto link
+    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
+    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
+    
+    window.location.href = `mailto:isholaabdulkafiy@gmail.com?subject=${subject}&body=${body}`;
+  };
+
+  const handleWhatsAppClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Construct the whatsapp link with optional message
+    let url = "https://wa.me/2349043406245";
+    
+    if (formData.message) {
+      const text = encodeURIComponent(`Hello, I'm ${formData.name ? formData.name : 'contacting you from your portfolio'}.\n\n${formData.message}`);
+      url += `?text=${text}`;
+    }
+    
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="contact" className="py-24 relative overflow-hidden">
       {/* Decorative background elements */}
@@ -24,12 +63,12 @@ export function Contact() {
           </h2>
           <div className="w-24 h-1 bg-primary rounded-full mb-6" />
           <p className="max-w-2xl text-muted-foreground text-lg">
-            Have a question or want to work together? Leave a message below or connect with me directly on WhatsApp.
+            Have a question or want to work together? Fill out the form below to send an email, or chat with me directly on WhatsApp.
           </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto glass-card rounded-2xl p-8 md:p-12 relative border border-white/10 shadow-2xl">
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={handleEmailSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -41,7 +80,10 @@ export function Contact() {
                 <label htmlFor="name" className="text-sm font-medium text-foreground">Name</label>
                 <Input 
                   id="name" 
+                  value={formData.name}
+                  onChange={handleInputChange}
                   placeholder="John Doe" 
+                  required
                   className="bg-background/50 border-white/10 focus-visible:ring-primary/50 text-foreground h-12"
                 />
               </motion.div>
@@ -56,7 +98,10 @@ export function Contact() {
                 <Input 
                   id="email" 
                   type="email" 
+                  value={formData.email}
+                  onChange={handleInputChange}
                   placeholder="john@example.com" 
+                  required
                   className="bg-background/50 border-white/10 focus-visible:ring-primary/50 text-foreground h-12"
                 />
               </motion.div>
@@ -72,7 +117,10 @@ export function Contact() {
               <label htmlFor="message" className="text-sm font-medium text-foreground">Message</label>
               <Textarea 
                 id="message" 
+                value={formData.message}
+                onChange={handleInputChange}
                 placeholder="How can I help you?" 
+                required
                 className="min-h-[150px] bg-background/50 border-white/10 focus-visible:ring-primary/50 text-foreground resize-none"
               />
             </motion.div>
@@ -84,23 +132,22 @@ export function Contact() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Button size="lg" className="flex-1 bg-primary hover:bg-primary/90 text-white rounded-full h-14 group">
+              <Button type="submit" size="lg" className="flex-1 bg-primary hover:bg-primary/90 text-white rounded-full h-14 group">
                 <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                Send Message
+                Send Email
               </Button>
               
               {/* WhatsApp Integration Button */}
-              <a 
-                href="https://wa.me/2349043406245" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex-1"
+              <Button 
+                type="button"
+                onClick={handleWhatsAppClick}
+                size="lg" 
+                variant="outline" 
+                className="flex-1 rounded-full h-14 glass border-[#25D366]/30 hover:bg-[#25D366]/10 text-foreground group"
               >
-                <Button size="lg" variant="outline" className="w-full rounded-full h-14 glass border-[#25D366]/30 hover:bg-[#25D366]/10 text-foreground group">
-                  <Phone className="mr-2 h-5 w-5 text-[#25D366] group-hover:animate-pulse" />
-                  Chat on WhatsApp
-                </Button>
-              </a>
+                <Phone className="mr-2 h-5 w-5 text-[#25D366] group-hover:animate-pulse" />
+                Chat on WhatsApp
+              </Button>
             </motion.div>
           </form>
         </div>
