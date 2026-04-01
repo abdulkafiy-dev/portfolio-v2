@@ -4,6 +4,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 
 const projects = [
   {
+    title: "Kapital Kitchen",
+    description: "A local kitchen platform offering authentic home-cooked meals, featuring a menu system, table reservation, and e-commerce store for pantry items.",
+    image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800",
+    tags: ["React", "Tailwind", "E-commerce"],
+    liveUrl: "https://kapital-kitchen.vercel.app/",
+    githubUrl: "https://github.com/abdulkafiy-dev"
+  },
+  {
     title: "Counting Application | JS",
     description: "This Counting app is useful when it comes to counting, whenever you refreshes your browser, your count still shows up.",
     image: "https://abdulkafiy.netlify.app/assets/images/counter-app.JPG",
