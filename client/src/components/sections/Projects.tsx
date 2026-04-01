@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import exclusiveKitchenImg from "../../assets/exclusive-kitchen.jpg";
 
 const projects = [
   {
     title: "Exclusive Kitchen",
     description: "An online platform for ordering authentic African dishes, featuring WhatsApp integration for fast delivery in Ibadan.",
-    image: "https://exclusive-kitchen.netlify.app/bg-img.png",
+    image: exclusiveKitchenImg,
     tags: ["HTML", "CSS", "WhatsApp API"],
     liveUrl: "https://exclusive-kitchen.netlify.app/",
     githubUrl: "https://github.com/abdulkafiy-dev"

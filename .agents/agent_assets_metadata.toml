@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "JPFdv_fVLzyBhLVyKtKLh"
@@ -12,3 +11,9 @@ id = "VrKDF39re-IDVhHsV1er3"
 uri = "file://client/src/assets/avatar.png"
 type = "image"
 title = "professional developer avatar"
+
+[[outputs]]
+id = "zmTVjLpJ7NR4gEkCFhSsw"
+uri = "file://client/src/assets/exclusive-kitchen.jpg"
+type = "image"
+title = "delicious african food meal restaurant jollof rice plantain"
