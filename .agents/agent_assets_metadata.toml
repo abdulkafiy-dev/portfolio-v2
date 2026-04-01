@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "JPFdv_fVLzyBhLVyKtKLh"
+uri = "file://client/src/assets/hero-bg.png"
+type = "image"
+title = "abstract futuristic dark grid background"
+
+[[generated]]
+id = "VrKDF39re-IDVhHsV1er3"
+uri = "file://client/src/assets/avatar.png"
+type = "image"
+title = "professional developer avatar"
