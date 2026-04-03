@@ -35,3 +35,9 @@ id = "MaP1rABY2bcUmQQtfgya9"
 uri = "file://client/src/assets/invoice-real.jpg"
 type = "image"
 title = "invoice receipt paper document"
+
+[[outputs]]
+id = "M2Odnmvziv1052algEXuK"
+uri = "file://client/src/assets/lumina-ai-art.jpg"
+type = "image"
+title = "artificial intelligence neural network glowing digital lines technology concept"
