@@ -17,3 +17,15 @@ id = "zmTVjLpJ7NR4gEkCFhSsw"
 uri = "file://client/src/assets/exclusive-kitchen.jpg"
 type = "image"
 title = "delicious african food meal restaurant jollof rice plantain"
+
+[[outputs]]
+id = "l741cX_d8R5Eb9V9ApNUT"
+uri = "file://client/src/assets/invoice-link.jpg"
+type = "image"
+title = "Invoice receipt checkout mobile payment"
+
+[[outputs]]
+id = "4darZgdSg-c_ViNokMg8K"
+uri = "file://client/src/assets/lumina-ai.jpg"
+type = "image"
+title = "Artificial intelligence digital technology nodes"

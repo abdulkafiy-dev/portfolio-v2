@@ -2,8 +2,26 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import exclusiveKitchenImg from "../../assets/exclusive-kitchen.jpg";
+import luminaImg from "../../assets/lumina-ai.jpg";
+import invoiceImg from "../../assets/invoice-link.jpg";
 
 const projects = [
+  {
+    title: "Lumina AI",
+    description: "An all-in-one AI multimodal suite for creators and entrepreneurs. Generate professional content securely with global language support.",
+    image: luminaImg,
+    tags: ["React", "AI", "Tailwind"],
+    liveUrl: "https://lumina-ng.vercel.app/",
+    githubUrl: "https://github.com/abdulkafiy-dev"
+  },
+  {
+    title: "Invoice Link",
+    description: "The fastest way for micro-businesses to send invoices to customers via a single shareable link without requiring client login.",
+    image: invoiceImg,
+    tags: ["Next.js", "Payments", "Mobile-First"],
+    liveUrl: "https://invoice-link.vercel.app/",
+    githubUrl: "https://github.com/abdulkafiy-dev"
+  },
   {
     title: "Exclusive Kitchen",
     description: "An online platform for ordering authentic African dishes, featuring WhatsApp integration for fast delivery in Ibadan.",
