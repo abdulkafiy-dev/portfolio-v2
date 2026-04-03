@@ -3,7 +3,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import exclusiveKitchenImg from "../../assets/exclusive-kitchen.jpg";
 import luminaImg from "../../assets/lumina-screenshot.jpg";
-import invoiceImg from "../../assets/invoice-screenshot.jpg";
+import invoiceImg from "../../assets/invoice-real.jpg";
 
 const projects = [
   {

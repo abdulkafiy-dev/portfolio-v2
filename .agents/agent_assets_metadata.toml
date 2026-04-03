@@ -29,3 +29,9 @@ id = "4darZgdSg-c_ViNokMg8K"
 uri = "file://client/src/assets/lumina-ai.jpg"
 type = "image"
 title = "Artificial intelligence digital technology nodes"
+
+[[outputs]]
+id = "MaP1rABY2bcUmQQtfgya9"
+uri = "file://client/src/assets/invoice-real.jpg"
+type = "image"
+title = "invoice receipt paper document"
