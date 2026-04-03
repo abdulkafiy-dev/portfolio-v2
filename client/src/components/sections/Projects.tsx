@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import exclusiveKitchenImg from "../../assets/exclusive-kitchen.jpg";
-import luminaImg from "../../assets/lumina-ai.jpg";
-import invoiceImg from "../../assets/invoice-link.jpg";
+import luminaImg from "../../assets/lumina-screenshot.jpg";
+import invoiceImg from "../../assets/invoice-screenshot.jpg";
 
 const projects = [
   {
